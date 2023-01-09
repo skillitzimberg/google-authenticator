@@ -1,16 +1,18 @@
 const usernameInput = document.getElementById("username");
+const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const confirmInput = document.getElementById("confirm");
-document.getElementById("submit").onclick = function (e) {
+document.getElementById("submit").addEventListener("click", function (e) {
   e.preventDefault();
-  var submit = validateForm();
+  var submit = registrationFormIsValid();
+  console.log("SUBMT: ", submit);
   return submit;
-};
+});
 
-function validateForm() {
-  console.log("VALIDATE");
-  console.log(usernameInput.value);
-  console.log(passwordInput.value);
-  console.log(confirmInput.value);
+function registrationFormIsValid() {
+  if (!usernameInput.value) return false;
+  if (!emailInput.value) return false;
+  if (!passwordInput.value) return false;
+  if (passwordInput.value != confirmInput.value) return false;
   return true;
 }
