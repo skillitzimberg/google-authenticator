@@ -17,5 +17,11 @@ form {
   display: flex;
   flex-direction: column;
   width: 30%;
-  margin: 0 auto;
+  margin: 20px auto 0;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
 }
