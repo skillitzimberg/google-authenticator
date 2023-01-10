@@ -10,20 +10,45 @@
 <body>
   <main>
     <h1>Multifactor Authenication with Google Authenticator</h1>
+
     <form name="register" id="register">
-      <label for="username">Username</label>
-      <input type="text" id="username">
+      <h2>Register</h2>
+      <div class="input-control">
+        <label for="username">Username</label>
+        <input type="text" id="username">
+      </div>
 
-      <label for="email">Email</label>
-      <input type="email" id="email">
+      <div class="input-control">
+        <label for="email">Email</label>
+        <input type="email" id="email">
+      </div>
 
-      <label for="password">Password</label>
-      <input type="password" id="password">
+      <div class="input-control">
+        <label for="password">Password</label>
+        <input type="password" id="password">
+      </div>
 
-      <label for="confirm">Confirm Password</label>
-      <input type="password" id="confirm">
+      <div class="input-control">
+        <label for="confirm">Confirm Password</label>
+        <input type="password" id="confirm">
+      </div>
       
       <input type="submit" id="submit" value="Register">
+    </form>
+
+    <form name="login" id="login">
+      <h2>Log In</h2>
+      <div class="input-control">
+        <label for="username">Username</label>
+        <input type="text" id="username">
+      </div>
+      
+      <div class="input-control">
+        <label for="password">Password</label>
+        <input type="password" id="password">
+      </div>
+
+      <input type="submit" id="submit" value="Log In">
     </form>
   </main>
   <script src="scripts.js"></script>
