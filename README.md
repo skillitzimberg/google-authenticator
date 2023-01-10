@@ -24,6 +24,11 @@ A project to learn how to register a new user & set up multifactor authenticatio
 * Add needed inputs for username and password
 * Validate form
 
+### Form View
+* Default view is Login form
+* Give Users the choice to login or register
+* Toggle view depending on the User's choice
+
 ### User login logic
 * Find User in datastore
 * Alert User if login fails
