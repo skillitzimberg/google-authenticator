@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Google Authenticator</title>
+</head>
+
+<body>
+  <main>
+    <h1>Multifactor Authenication with Google Authenticator</h1>
+
+    <form name="register">
+      <h2>Register</h2>
+      <h2 id="form-label">Log In</h2>
+      <div class="input-control">
+        <label for="username">Username</label>
+        <input type="text" id="username">
+      </div>
+
+      <div class="input-control">
+        <label for="email">Email</label>
+        <input type="email" id="email">
+      </div>
+
+      <div class="input-control">
+        <label for="password">Password</label>
+        <input type="password" id="password">
+      </div>
+
+      <div class="input-control">
+        <label for="confirm">Confirm Password</label>
+        <input type="password" id="confirm">
+      </div>
+
+      <input type="submit" id="register">
+    </form>
+
+    <p>Already registered? <a href="/login.html">Login</a></p>
+  </main>
+  <script src="scripts.js"></script>
+</body>
+</html>
