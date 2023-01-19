@@ -1,11 +1,10 @@
+const users = [];
 const usernameInput = document.getElementById("username");
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const confirmInput = document.getElementById("confirm");
 
-const users = [];
-
-document.getElementById("submit").addEventListener("click", function (e) {
+document.getElementById("register").addEventListener("click", function (e) {
   e.preventDefault();
   if (registrationFormIsValid()) {
     registerUser({
