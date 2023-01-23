@@ -11,12 +11,11 @@ if (registerButton) {
     e.preventDefault();
     if (registrationFormIsValid()) {
       registerUser({
-        userName: usernameInput.value,
+        username: usernameInput.value,
         email: emailInput.value,
         password: passwordInput.value,
       });
     }
-    console.log(users);
   });
 }
 
@@ -31,6 +30,7 @@ function registrationFormIsValid() {
 function registerUser(user) {
   if (!userExists(user)) {
     users.push(user);
+    localStorage.setItem("users", JSON.stringify(users));
   }
 }
 
@@ -46,14 +46,15 @@ const loginButton = document.getElementById("login");
 if (loginButton) {
   loginButton.addEventListener("click", function (e) {
     e.preventDefault();
-    if (userIsAuthenticated(usernameInput, passwordInput)) {
+    if (userIsAuthenticated(usernameInput.value, passwordInput.value)) {
       console.log("YAY! You're logged in!");
     }
   });
 }
 
 function userIsAuthenticated(username, password) {
-  const authenticatedUser = users.find(
+  const storedUsers = JSON.parse(localStorage.getItem("users"));
+  const authenticatedUser = storedUsers.find(
     (usr) => usr.username == username && usr.password == password
   );
   return !!authenticatedUser;
